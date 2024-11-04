@@ -3,64 +3,86 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.HospedagemContratada"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource Gray100}">
+             BackgroundColor="#18181B">
 
     <VerticalStackLayout VerticalOptions="CenterAndExpand">
 
         <Label Text="{Binding QuartoSelecionado.Descricao}"
-               TextColor="{StaticResource Primary}"
-               FontFamily="Kalam"
-               FontSize="50"
+               FontSize="36"
+               TextColor="#C084FC"
+               FontFamily="PoppinsRegular"
                HorizontalTextAlignment="Center"/>
 
-        <Frame Margin="10">
+        <Frame Margin="10" BackgroundColor="#18181B">
             <StackLayout  Orientation="Horizontal" >
                 <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                    <Label Text="Adultos: " />
+                    <Label Text="Adultos: "
+                        TextColor="#F4F4F5"
+                        FontFamily="PoppinsRegular" />
                     <Label Text="{Binding QntAdultos}" 
-                           TextColor="{StaticResource Primary}" />
+                           TextColor="#C084FC"
+                           FontFamily="PoppinsRegular" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                    <Label Text="Crianças: " />
+                    <Label Text="Crianças: "
+                        TextColor="#F4F4F5"
+                        FontFamily="PoppinsRegular" />
                     <Label Text="{Binding QntCriancas}" 
-                           TextColor="{StaticResource Primary}" />
+                           TextColor="#C084FC"
+                           FontFamily="PoppinsRegular" />
                 </HorizontalStackLayout>
             </StackLayout>
         </Frame>
 
-        <Frame Margin="10">
+        <Frame Margin="10" BackgroundColor="#3F3F46">
             <Grid ColumnDefinitions="*, *, *"
                   RowDefinitions="Auto, Auto">
-                <Label Grid.Row="0" Grid.Column="0" Text="Check-in:" />
-                <Label Grid.Row="0" Grid.Column="1" Text="Check-out:" />
-                <Label Grid.Row="0" Grid.Column="2" Text="Estadia:" />
+                <Label Grid.Row="0" Grid.Column="0"
+                    Text="Check-in:"
+                    TextColor="#F4F4F5"
+                    FontFamily="PoppinsRegular" />
+                <Label Grid.Row="0" Grid.Column="1"
+                    Text="Check-out:"
+                    TextColor="#F4F4F5"
+                    FontFamily="PoppinsRegular" />
+                <Label Grid.Row="0" Grid.Column="2"
+                    Text="Estadia:"
+                    TextColor="#F4F4F5"
+                    FontFamily="PoppinsRegular" />
 
                 <Label Grid.Row="1" Grid.Column="0" 
                        Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}"
-                       TextColor="{StaticResource Primary}" />
+                       TextColor="#C084FC"
+                       FontFamily="PoppinsRegular" />
 
                 <Label Grid.Row="1" Grid.Column="1" 
                        Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}"
-                       TextColor="{StaticResource Primary}" />
+                       TextColor="#C084FC"
+                       FontFamily="PoppinsRegular" />
 
                 <Label Grid.Row="1" Grid.Column="2" 
                        Text="{Binding Estadia}"
-                       TextColor="{StaticResource Primary}"/>
+                       TextColor="#C084FC"
+                       FontFamily="PoppinsRegular"/>
             </Grid>
         </Frame>
 
-        <Frame Margin="10">
+        <Frame Margin="10" BackgroundColor="#3F3F46">
             <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                <Label Text="Valor Total: " />
+                <Label Text="Valor Total: "
+                    TextColor="#F4F4F5"
+                    FontFamily="PoppinsRegular" />
                 <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'} "
-                       TextColor="{StaticResource Primary}" />
+                       TextColor="#C084FC"
+                       FontFamily="PoppinsRegular" />
             </HorizontalStackLayout>
         </Frame>
 
         <Button Text="Voltar"
                 HorizontalOptions="Center"
-                Clicked="Button_Clicked" />
+                Clicked="Button_Clicked"
+                BackgroundColor="#A78BFA" />
 
     </VerticalStackLayout>
 </ContentPage>
